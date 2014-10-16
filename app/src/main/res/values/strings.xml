@@ -34,7 +34,15 @@
     <string name="register_button">Register</string>
     <string name="login_button">Login</string>
     <string name="login_password_label">Password: </string>
-    <string name="login_username_label">User Name: </string>
+    <string name="login_username_label">Username: </string>
     <string name="login_main_title">Let\'s Meetup!</string>
+
+    <!--create an account page-->
+    <string name="register">Create Your Account!</string>
+    <string name="create_first_name">First Name: </string>
+    <string name="create_last_name">Last Name: </string>
+    <string name="login_password_label_confirm">Confirm Password: </string>
+    <string name="create_button">Let's Go Meet with Friends!</string>
+
 
 </resources>
