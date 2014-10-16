@@ -33,8 +33,8 @@
     <string name="lost_password_button">Lost Password</string>
     <string name="register_button">Register</string>
     <string name="login_button">Login</string>
-    <string name="login_password_label">Password:</string>
-    <string name="login_username_label">User Name:</string>
-    <string name="login_main_title">Let\'s Meetup</string>
+    <string name="login_password_label">Password: </string>
+    <string name="login_username_label">User Name: </string>
+    <string name="login_main_title">Let\'s Meetup!</string>
 
 </resources>
