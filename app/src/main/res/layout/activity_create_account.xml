@@ -75,6 +75,30 @@
             android:ems="10"
             android:id="@+id/login_last_name" />
 
+        <!--text-box email-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/create_email"
+            android:textColor="#003366"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/create_email"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="#003366"
+            android:textColorHighlight="#FFFFFF"
+            android:fontFamily="sans-serif-condensed"
+            android:background="#FFEEFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10sp"
+            android:ems="10"
+            android:id="@+id/create_email_box" />
+
         <!--text-box username-->
         <TextView
             android:layout_width="wrap_content"
@@ -149,20 +173,37 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/create_button"
             android:fontFamily="sans-serif-short"
-            android:id="@+id/login_button"
+            android:id="@+id/create_button"
             android:textSize="15sp"
             android:background="#003366"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="5dp"
             android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:textAllCaps="true"
-            android:clickable="true"/>
+            android:clickable="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/go_back_button"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/go_back_button"
+            android:textSize="12sp"
+            android:background="#003366"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:clickable="true" />
+
 
     </LinearLayout>
 

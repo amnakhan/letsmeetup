@@ -41,8 +41,13 @@
     <string name="register">Create Your Account!</string>
     <string name="create_first_name">First Name: </string>
     <string name="create_last_name">Last Name: </string>
+    <string name="create_email">Email:</string>
     <string name="login_password_label_confirm">Confirm Password: </string>
     <string name="create_button">Let's Go Meet with Friends!</string>
+    <string name="go_back_button">Whoops! Go back</string>
 
+    <!--forgot password page-->
+    <string name="send_email">Email Address Associated with Account:</string>
+    <string name="password_button">Send me my password!</string>
 
 </resources>
