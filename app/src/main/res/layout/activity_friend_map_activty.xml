@@ -23,7 +23,7 @@
             android:text="@string/friend_map_name_of_friend"
             android:id="@+id/friend_map_name"
             android:textSize="45sp"
-            android:padding="10dp"
+            android:padding="5dp"
             android:layout_gravity="center_horizontal" />
 
         <TextView

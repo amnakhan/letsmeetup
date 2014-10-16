@@ -20,12 +20,6 @@
         revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
     <item
-        dex="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/app/build/intermediates/pre-dexed/debug/classes-fa9505d00d80de78c48742eb6055131f2c982eff.jar"
-        jar="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/build/intermediates/exploded-aar/com.google.android.gms/play-services/5.2.08/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="1ed7a7a05185651f9af41ad93711cb96b66f331c"/>
-    <item
         dex="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-cd46262f162efca313a90d5a97b460c1eb423468.jar"
         jar="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
         jumboMode="false"
@@ -37,6 +31,12 @@
         jumboMode="false"
         revision="20.0.0"
         sha1="0b59a1d65db47ffa9c79abc472b447952592621a"/>
+    <item
+        dex="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/app/build/intermediates/pre-dexed/debug/classes-398b88aa96327d454ee14f450570b41b4a3482cf.jar"
+        jar="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/build/intermediates/exploded-aar/com.google.android.gms/play-services/4.2.42/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e5f81129dfb3d02df80126512bc98278ed2bb40a"/>
     <item
         dex="/Users/ClaudiusThaBeast/Developer/Mobileapps/AndroidDev/Letsmeetup/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-490f37ed587883ce48496dc240a6cd98851a2ba5.jar"
         jar="/Users/ClaudiusThaBeast/Desktop/adt-bundle-mac/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
