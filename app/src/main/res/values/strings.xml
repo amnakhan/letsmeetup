@@ -29,5 +29,10 @@
         A: Very Fuckin' Cool \n
     </string>
     <string name="common_questions">Commonly Asked Questions</string>
+    <string name="when_invite">When</string>
+    <string name="where_invite">Where</string>
+    <string name="friend_map_name_of_friend">Name Of Friend</string>
+    <string name="friend_map_miles">123 Miles Away</string>
+    <string name="send_request_meetup">Send Meetup Request</string>
 
 </resources>
