@@ -4,5 +4,14 @@
     <string name="app_name">Letsmeetup</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="app_title">Let\'s Meet Up</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    <string name="title_activity_lost_password">LostPasswordActivity</string>
+    <string name="title_activity_find_friends">FindFriendsActivity</string>
+    <string name="title_activity_close_friends">CloseFriendsActivity</string>
+    <string name="title_activity_friend_map_activty">FriendMapActivty</string>
+    <string name="title_activity_qa">QAActivity</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="title_activity_edit_account">EditAccountActivity</string>
 
 </resources>
