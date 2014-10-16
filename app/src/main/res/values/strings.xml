@@ -14,4 +14,20 @@
     <string name="title_activity_contacts">ContactsActivity</string>
     <string name="title_activity_edit_account">EditAccountActivity</string>
 
+
+
+    <string name="qa">
+        Q: Who are we? \n
+        A: Claudius, Jon, Amna \n
+        \n
+        \n
+        Q: What is this App? \n
+        A: Let's Meet Up - where friends find friends \n
+        \n
+        \n
+        Q: How cool are you? \n
+        A: Very Fuckin' Cool \n
+    </string>
+    <string name="common_questions">Commonly Asked Questions</string>
+
 </resources>
