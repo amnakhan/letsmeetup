@@ -6,34 +6,33 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#BDF2FF"
-    tools:context="com.mbembac.letsmeetup.LostPasswordActivity">
+    tools:context="com.mbembac.letsmeetup.Application"
+    android:background="#BDF2FF">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="25dp">
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:clickable="false">
 
-        <!--title-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Lost Your Password?"
-            android:layout_marginBottom="15dp"
+            android:text="@string/login_main_title"
             android:textColor="#003366"
             android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
-            android:textSize="40dp"
-            android:id="@+id/textView"
-            android:gravity="center"
+            android:id="@+id/login_main_title"
+            android:textSize="55sp"
+            android:padding="25sp"
             android:layout_gravity="center_horizontal" />
 
-
-        <!--text-box username-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,66 +51,80 @@
             android:fontFamily="sans-serif-condensed"
             android:background="#FFEEFF"
             android:layout_gravity="center_horizontal"
+            android:id="@+id/username"
             android:layout_marginBottom="10sp"
-            android:ems="10"
-            android:id="@+id/login_username" />
+            android:cursorVisible="true"
+            android:ems="10"/>
 
-        <!--text-box ask for email address-->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/send_email"
+            android:text="@string/login_password_label"
             android:textColor="#003366"
             android:fontFamily="sans-serif-condensed"
-            android:id="@+id/send_email_label"
+            android:id="@+id/login_password_label"
             android:layout_gravity="center_horizontal" />
+
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:textColor="#003366"
             android:textColorHighlight="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
             android:background="#FFEEFF"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10sp"
             android:ems="10"
-            android:id="@+id/send_email" />
+            android:cursorVisible="true"
+            android:id="@+id/password" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/password_button"
+            android:text="@string/login_button"
             android:fontFamily="sans-serif-short"
-            android:id="@+id/create_button"
+            android:textAllCaps="true"
+            android:id="@+id/login"
             android:textSize="15sp"
-            android:background="#003366"
-            android:textColor="#FFFFFF"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="5dp"
-            android:padding="10dp"
             android:layout_gravity="center_horizontal"
-            android:textAllCaps="true"
-            android:clickable="true"/>
-
+            android:clickable="true"
+            android:onClick="login"
+            style="@style/main_button"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/go_back_button"
+            android:text="@string/register_button"
             android:fontFamily="sans-serif-short"
-            android:id="@+id/go_back_button"
-            android:textSize="12sp"
-            android:background="#003366"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="5dp"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal"
             android:textAllCaps="true"
-            android:clickable="true" />
-
+            android:id="@+id/register"
+            android:textSize="15sp"
+            android:layout_margin="0dp"
+            android:padding="10sp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:onClick="login"
+            style="@style/main_button"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lost_password_button"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/lost_password_button"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:padding="10sp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            style="@style/main_button"/>
 
     </LinearLayout>
 

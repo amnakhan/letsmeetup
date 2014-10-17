@@ -18,12 +18,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Create Your Account!"
+            android:text="@string/create_account"
             android:layout_marginBottom="15dp"
             android:textColor="#003366"
             android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:id="@+id/textView"
             android:gravity="center"
             android:layout_gravity="center_horizontal" />
@@ -36,7 +36,7 @@
             android:text="@string/create_first_name"
             android:textColor="#003366"
             android:fontFamily="sans-serif-condensed"
-            android:id="@+id/create_first_name"
+            android:id="@+id/first_name_label"
             android:layout_gravity="center_horizontal" />
 
         <EditText
@@ -49,6 +49,7 @@
             android:layout_gravity="center_horizontal"
             android:id="@+id/login_first_name"
             android:layout_marginBottom="10sp"
+            android:cursorVisible="true"
             android:ems="10"/>
 
         <!--text-box last name-->
@@ -59,13 +60,12 @@
             android:text="@string/create_last_name"
             android:textColor="#003366"
             android:fontFamily="sans-serif-condensed"
-            android:id="@+id/create_last_name"
+            android:id="@+id/last_name_label"
             android:layout_gravity="center_horizontal" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:textColor="#003366"
             android:textColorHighlight="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
@@ -73,6 +73,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10sp"
             android:ems="10"
+            android:cursorVisible="true"
             android:id="@+id/login_last_name" />
 
         <!--text-box email-->
@@ -83,13 +84,12 @@
             android:text="@string/create_email"
             android:textColor="#003366"
             android:fontFamily="sans-serif-condensed"
-            android:id="@+id/create_email"
+            android:id="@+id/email_label"
             android:layout_gravity="center_horizontal" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:textColor="#003366"
             android:textColorHighlight="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
@@ -97,7 +97,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10sp"
             android:ems="10"
-            android:id="@+id/create_email_box" />
+            android:cursorVisible="true"
+            android:id="@+id/create_email" />
 
         <!--text-box username-->
         <TextView
@@ -113,7 +114,6 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:textColor="#003366"
             android:textColorHighlight="#FFFFFF"
             android:fontFamily="sans-serif-condensed"
@@ -121,7 +121,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10sp"
             android:ems="10"
-            android:id="@+id/login_username" />
+            android:cursorVisible="true"
+            android:id="@+id/username" />
 
         <!--text-box pw-->
         <TextView
@@ -145,7 +146,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10sp"
             android:ems="10"
-            android:id="@+id/login_password" />
+
+            android:id="@+id/password" />
 
         <!--text-box pw-->
         <TextView
@@ -177,16 +179,15 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/create_button"
             android:fontFamily="sans-serif-short"
-            android:id="@+id/create_button"
+            android:id="@+id/signup"
             android:textSize="15sp"
-            android:background="#003366"
-            android:textColor="#FFFFFF"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="5dp"
             android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:textAllCaps="true"
-            android:clickable="true" />
+            android:clickable="true"
+            style="@style/main_button" />
 
         <Button
             android:layout_width="wrap_content"
@@ -196,13 +197,12 @@
             android:fontFamily="sans-serif-short"
             android:id="@+id/go_back_button"
             android:textSize="12sp"
-            android:background="#003366"
-            android:textColor="#FFFFFF"
             android:layout_marginBottom="5dp"
             android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:textAllCaps="true"
-            android:clickable="true" />
+            android:clickable="true"
+            style="@style/main_button"/>
 
 
     </LinearLayout>

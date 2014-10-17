@@ -43,11 +43,20 @@
     <string name="create_last_name">Last Name: </string>
     <string name="create_email">Email:</string>
     <string name="login_password_label_confirm">Confirm Password: </string>
-    <string name="create_button">Let's Go Meet with Friends!</string>
+    <string name="create_button">Let\'s Go Meet with Friends!</string>
     <string name="go_back_button">Whoops! Go back</string>
+    <string name="create_account">Create your Account!</string>
 
     <!--forgot password page-->
     <string name="send_email">Email Address Associated with Account:</string>
     <string name="password_button">Send me my password!</string>
+
+
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="LoginBtn">Login</string>
+    <string name="SignupBtn">Sign Up</string>
+    <string name="LogoutBtn">Log Out</string>
+    <string name="Welcome">Welcome!</string>
 
 </resources>
