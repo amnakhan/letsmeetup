@@ -1,9 +1,11 @@
 package com.mbembac.letsmeetup;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class LoginActivty extends ActionBarActivity {
@@ -12,6 +14,7 @@ public class LoginActivty extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_activty);
+
     }
 
 
@@ -32,5 +35,11 @@ public class LoginActivty extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void login(View view) {
+        Intent intent = new Intent(this, CloseFriendsActivity.class);
+        startActivity(intent);
     }
 }

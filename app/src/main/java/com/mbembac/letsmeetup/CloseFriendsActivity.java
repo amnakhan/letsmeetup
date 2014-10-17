@@ -1,9 +1,11 @@
 package com.mbembac.letsmeetup;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class CloseFriendsActivity extends ActionBarActivity {
@@ -12,6 +14,8 @@ public class CloseFriendsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_close_friends);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -32,5 +36,10 @@ public class CloseFriendsActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void findFriends(View view) {
+        Intent intent = new Intent(this, FindFriendsActivity.class);
+        startActivity(intent);
     }
 }

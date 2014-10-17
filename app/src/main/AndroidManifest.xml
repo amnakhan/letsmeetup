@@ -52,7 +52,7 @@
         <activity
             android:name=".FindFriendsActivity"
             android:label="@string/title_activity_find_friends"
-            android:parentActivityName=".LoginActivty" >
+            android:parentActivityName=".CloseFriendsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="CloseFriendsActivity" />
