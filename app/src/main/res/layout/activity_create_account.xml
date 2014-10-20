@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BDF2FF"
+    android:background="#FFC266"
     tools:context="com.mbembac.letsmeetup.CreateAccountActivity">
 
     <LinearLayout
@@ -20,7 +20,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/create_account"
             android:layout_marginBottom="15dp"
-            android:textColor="#003366"
+            android:textColor="#393939"
             android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             android:textSize="40sp"
@@ -149,29 +149,6 @@
 
             android:id="@+id/password" />
 
-        <!--text-box pw-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/login_password_label_confirm"
-            android:textColor="#003366"
-            android:fontFamily="sans-serif-condensed"
-            android:id="@+id/login_password_label_confirm"
-            android:layout_gravity="center_horizontal" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:textColor="#003366"
-            android:textColorHighlight="#FFFFFF"
-            android:fontFamily="sans-serif-condensed"
-            android:background="#FFEEFF"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10sp"
-            android:ems="10"
-            android:id="@+id/login_password_confirm" />
 
         <Button
             android:layout_width="wrap_content"

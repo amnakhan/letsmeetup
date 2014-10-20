@@ -57,6 +57,6 @@
     <string name="LoginBtn">Login</string>
     <string name="SignupBtn">Sign Up</string>
     <string name="LogoutBtn">Log Out</string>
-    <string name="Welcome">Welcome!</string>
+    <string name="Welcome">Let\'s Meetup with Friends!</string>
 
 </resources>

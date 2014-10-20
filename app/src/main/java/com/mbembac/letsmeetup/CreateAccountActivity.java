@@ -17,6 +17,7 @@ import com.parse.SignUpCallback;
 
 public class CreateAccountActivity extends Activity {
 
+    Button goback;
     Button signup;
     String usernametxt;
     String passwordtxt;
@@ -49,6 +50,7 @@ public class CreateAccountActivity extends Activity {
 
         // Locate Buttons in main.xml
         signup = (Button) findViewById(R.id.signup);
+        goback = (Button) findViewById(R.id.go_back_button);
 
         // Login Button Click Listener
         signup.setOnClickListener(new OnClickListener() {
@@ -59,38 +61,63 @@ public class CreateAccountActivity extends Activity {
                 // Retrieve the text entered from the EditText
                 first_nametxt = first_name.getText().toString();
                 last_nametxt = last_name.getText().toString();
-                emailtxt = email.getText().toString();
-                usernametxt = username.getText().toString();
+                emailtxt = email.getText().toString().toLowerCase();
+                usernametxt = username.getText().toString().toLowerCase();
                 passwordtxt = password.getText().toString();
 
                 // Force user to fill up the form
                 if (usernametxt.equals("") && passwordtxt.equals("") && emailtxt.equals("")) {
                     Toast.makeText(getApplicationContext(),
-                            "Please fill in the username and password field.",
+                            "Please fill in the username, password, and email fields.",
                             Toast.LENGTH_LONG).show();
 
                 } else {
                     // Save new user data into Parse.com Data Storage
                     ParseUser user = new ParseUser();
+                    user.put("first_name", first_nametxt);
+                    user.put("last_name", last_nametxt);
                     user.setEmail(emailtxt);
                     user.setUsername(usernametxt);
                     user.setPassword(passwordtxt);
                     user.signUpInBackground(new SignUpCallback() {
                         public void done(ParseException e) {
                             if (e == null) {
-                                // Show a simple Toast message upon successful registration
+
+                                ParseUser.logInInBackground(usernametxt, passwordtxt, new LogInCallback() {
+                                    public void done(ParseUser user, ParseException e) {
+                                        Intent intent = new Intent(
+                                                CreateAccountActivity.this,
+                                                Welcome.class);
+                                        startActivity(intent);
+                                        Toast.makeText(getApplicationContext(),
+                                                "Successfully Registered!",
+                                                Toast.LENGTH_LONG).show();
+                                        finish();
+                                    }
+                                });
+                            }else {
                                 Toast.makeText(getApplicationContext(),
-                                        "Successfully Registered!",
-                                        Toast.LENGTH_LONG).show();
-                            } else {
-                                Toast.makeText(getApplicationContext(),
-                                        "Sign up Error", Toast.LENGTH_LONG)
+                                        "Whoops! Email or Username already used. Let's try that again.", Toast.LENGTH_LONG)
                                         .show();
                             }
                         }
                     });
 
+
                 }
+            }
+        });
+
+        // Go Back to Home Page Click Listener
+        goback.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(CreateAccountActivity.this,
+                        LoginSignupActivity.class);
+                startActivity(intent);
+                finish();
+
             }
         });
     }

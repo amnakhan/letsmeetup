@@ -28,14 +28,12 @@
         <activity android:name=".LoginSignupActivity" />
         <activity android:name=".Welcome" />
         <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".LostPasswordActivity" />
 
         <activity
             android:name=".FriendMapActivty"
             android:label="FriendMapActivty" />
 
-        <activity
-            android:name=".LostPasswordActivity"
-            android:label="@string/title_activity_lost_password" />
 
         <activity
             android:name=".FindFriendsActivity"

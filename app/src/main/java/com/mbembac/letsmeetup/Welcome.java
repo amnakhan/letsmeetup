@@ -7,6 +7,7 @@ package com.mbembac.letsmeetup;
 import com.parse.ParseUser;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,6 +35,7 @@ public class Welcome extends Activity {
         TextView txtuser = (TextView) findViewById(R.id.txtuser);
 
         // Set the currentUser String into TextView
+        txtuser.setTextColor(Color.BLACK);
         txtuser.setText("You are logged in as " + struser);
 
         // Locate Button in welcome.xml

@@ -21,8 +21,11 @@ public class LoginSignupActivity extends Activity {
     // Declare Variables
     Button loginbutton;
     Button registerbutton;
+    Button lostpwbutton;
+
     String usernametxt;
     String passwordtxt;
+
     EditText password;
     EditText username;
 
@@ -38,6 +41,7 @@ public class LoginSignupActivity extends Activity {
         // Locate Buttons in main.xml
         loginbutton = (Button) findViewById(R.id.login);
         registerbutton = (Button) findViewById(R.id.register);
+        lostpwbutton = (Button) findViewById(R.id.lostpw);
 
         // Sign up Button Click Listener
         registerbutton.setOnClickListener(new OnClickListener() {
@@ -52,6 +56,18 @@ public class LoginSignupActivity extends Activity {
             }
         });
 
+        // Lost Pw Button Click Listener
+        lostpwbutton.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(LoginSignupActivity.this,
+                        LostPasswordActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
 
         // Login Button Click Listener
@@ -59,7 +75,7 @@ public class LoginSignupActivity extends Activity {
 
             public void onClick(View arg0) {
                 // Retrieve the text entered from the EditText
-                usernametxt = username.getText().toString();
+                usernametxt = username.getText().toString().toLowerCase();
                 passwordtxt = password.getText().toString();
 
                 // Send data to Parse.com for verification
