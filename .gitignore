@@ -4,3 +4,7 @@
 .DS_Store
 /.idea/*
 /build.gradle
+*.iml
+build/*
+app/src/main/libs/*.iml
+app/*.iml
