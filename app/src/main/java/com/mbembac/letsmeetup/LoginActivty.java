@@ -2,6 +2,7 @@ package com.mbembac.letsmeetup;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -20,7 +21,7 @@ public class LoginActivty extends ActionBarActivity {
 
         Log.e(TAG, "+++ In onCreate() +++");
 
-
+        Debug.startMethodTracing();
     }
 
 
@@ -78,6 +79,7 @@ public class LoginActivty extends ActionBarActivity {
         super.onDestroy();
 
         Log.e(TAG, "+++ In onDestroy() +++");
+        Debug.stopMethodTracing();
 
     }
 
