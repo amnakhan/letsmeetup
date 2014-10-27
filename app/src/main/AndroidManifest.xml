@@ -44,6 +44,10 @@
             android:label="@string/title_activity_close_friends" />
 
         <activity
+            android:name=".FriendActivity"
+            android:label="@string/title_activity_friend" />
+
+        <activity
             android:name=".QAActivity"
             android:label="@string/title_activity_qa" />
 

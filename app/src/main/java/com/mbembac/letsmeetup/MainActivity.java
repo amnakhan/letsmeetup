@@ -10,6 +10,9 @@ import android.os.Bundle;
 import com.parse.ParseAnonymousUtils;
 import com.parse.ParseUser;
 
+import android.graphics.Typeface;
+import android.widget.TextView;
+
 public class MainActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {

@@ -20,6 +20,10 @@ import com.parse.SignUpCallback;
 public class LostPasswordActivity extends Activity {
 
     Button goback;
+    Button sendpw;
+
+    EditText email;
+    String emailtxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +32,42 @@ public class LostPasswordActivity extends Activity {
         setContentView(R.layout.activity_lost_password);
 
         goback = (Button) findViewById(R.id.go_back_button);
+        sendpw = (Button) findViewById(R.id.send_button);
 
-        // Lost Pw Button Click Listener
+        email = (EditText) findViewById(R.id.send_email);
+
+        // send password to user
+        sendpw.setOnClickListener(new OnClickListener(){
+
+            public void onClick(View arg0){
+
+
+                emailtxt = email.getText().toString().toLowerCase();
+
+                try {
+                    ParseUser.requestPasswordReset(emailtxt);
+                    Toast.makeText(
+                            getApplicationContext(),
+                            "An email has been sent for you to reset your password.",
+                            Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(LostPasswordActivity.this,
+                            LoginSignupActivity.class);
+                    startActivity(intent);
+
+                }
+                catch (ParseException e){
+                    Toast.makeText(
+                            getApplicationContext(),
+                            "An error occurred while sending the email.",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+
+        });
+
+
+        // go back button from lost password page
         goback.setOnClickListener(new OnClickListener() {
 
             public void onClick(View arg0) {
