@@ -5,9 +5,9 @@ package com.mbembac.letsmeetup;
  */
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Debug;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -20,13 +20,29 @@ public class Welcome extends Activity {
     // Declare Variable
     Button logout;
 
+    private Welcome context;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        context = this;
+
         // Get the view from singleitemview.xml
         setContentView(R.layout.welcome);
 
-        Debug.startMethodTracing();
+        Button map = (Button) findViewById(R.id.find_friends_button);
+        map.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent friendMap;
+                friendMap = new Intent(context, FriendMapActivty.class);
+                startActivity(friendMap);
+            }
+        });
+
+
+//        Debug.startMethodTracing();
 
         // Retrieve current user from Parse.com
         ParseUser currentUser = ParseUser.getCurrentUser();
@@ -84,6 +100,7 @@ public class Welcome extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Debug.stopMethodTracing();
+//        Debug.stopMethodTracing();
     }
+
 }

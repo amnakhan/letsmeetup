@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mbembac.letsmeetup">
 
-    <meta-data
-    android:name="com.google.android.gms.version"
-    android:value="@integer/google_play_services_version" />
-
     <!--</application>-->
 
     <application
@@ -22,40 +18,37 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".FindFriendsActivity"
+            android:parentActivityName=".Welcome">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="Welcome" />
+        </activity>
+
         <activity android:name=".LoginSignupActivity" />
         <activity android:name=".Welcome" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LostPasswordActivity" />
+        <activity android:name=".FriendMapActivty" />
+        <activity android:name=".QAActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".EditAccountActivity" />
 
-        <activity
-            android:name=".FriendMapActivty"
-            android:label="FriendMapActivty" />
+        <!--googlemaps-->
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".FindFriendsActivity"
-            android:label="@string/title_activity_find_friends"
-            android:parentActivityName=".CloseFriendsActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="CloseFriendsActivity" />
-        </activity>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDdDpGkDwdVATDZni-NrtfB9Ua6nJC3i0M"/>
 
-        <activity
-            android:name=".CloseFriendsActivity"
-            android:label="@string/title_activity_close_friends" />
+        <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
 
-        <activity
-            android:name=".QAActivity"
-            android:label="@string/title_activity_qa" />
-
-        <activity
-            android:name=".ContactsActivity"
-            android:label="@string/title_activity_contacts" />
-
-        <activity
-            android:name=".EditAccountActivity"
-            android:label="@string/title_activity_edit_account" />
     </application>
 
     <!-- To access Google+ APIs: -->
@@ -79,8 +72,8 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
 
