@@ -1,7 +1,12 @@
-/local.properties
+*.properties
 /.idea/workspace.xml
 .DS_Store
 /.idea/*
 *.gradle
 *.iml
 build/*
+gradle/*
+gradlew
+*.bat
+letsmeetup.xml
+module_letsmeetup.xml
