@@ -40,7 +40,7 @@
             xmlns:map="http://schemas.android.com/apk/res-auto"
             android:id="@+id/gmap"
             android:layout_width="match_parent"
-            android:layout_height="245dp"
+            android:layout_height="275dp"
             android:name="com.google.android.gms.maps.MapFragment"
             map:cameraBearing="112.5"
             map:cameraTargetLat="39.9997"
@@ -54,7 +54,8 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -76,7 +77,8 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
