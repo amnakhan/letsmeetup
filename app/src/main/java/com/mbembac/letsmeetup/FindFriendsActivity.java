@@ -1,12 +1,12 @@
 package com.mbembac.letsmeetup;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class FindFriendsActivity extends ActionBarActivity {
+public class FindFriendsActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,4 +33,6 @@ public class FindFriendsActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

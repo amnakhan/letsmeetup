@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_parse-1.7.1" default="compile.module.parse-1.7.1">
+  <dirname property="module.parse-1.7.1.basedir" file="${ant.file.module_parse-1.7.1}"/>
+  
+  <property name="module.jdk.home.parse-1.7.1" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.parse-1.7.1" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.parse-1.7.1" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.parse-1.7.1" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="parse-1.7.1.output.dir" value="undefined"/>
+  <property name="parse-1.7.1.testoutput.dir" value="undefined"/>
+  
+  <path id="parse-1.7.1.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="parse-1.7.1.module.production.classpath">
+    <path refid="${module.jdk.classpath.parse-1.7.1}"/>
+  </path>
+  
+  <path id="parse-1.7.1.runtime.production.module.classpath"/>
+  
+  <path id="parse-1.7.1.module.classpath">
+    <path refid="${module.jdk.classpath.parse-1.7.1}"/>
+  </path>
+  
+  <path id="parse-1.7.1.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.parse-1.7.1">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.parse-1.7.1">
+    <patternset refid="excluded.from.module.parse-1.7.1"/>
+  </patternset>
+  
+  
+  <target name="compile.module.parse-1.7.1" depends="compile.module.parse-1.7.1.production,compile.module.parse-1.7.1.tests" description="Compile module Parse-1.7.1"/>
+  
+  <target name="compile.module.parse-1.7.1.production" depends="register.custom.compilers" description="Compile module Parse-1.7.1; production classes"/>
+  
+  <target name="compile.module.parse-1.7.1.tests" depends="register.custom.compilers,compile.module.parse-1.7.1.production" description="compile module Parse-1.7.1; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.parse-1.7.1" description="cleanup module">
+    <delete dir="${parse-1.7.1.output.dir}"/>
+    <delete dir="${parse-1.7.1.testoutput.dir}"/>
+  </target>
+</project>

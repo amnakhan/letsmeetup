@@ -11,8 +11,8 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
@@ -22,7 +22,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/friend_map_name_of_friend"
             android:id="@+id/friend_map_name"
-            android:textSize="45sp"
+            android:textSize="25sp"
             android:padding="5dp"
             android:layout_gravity="center_horizontal" />
 
@@ -32,19 +32,15 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/friend_map_miles"
             android:id="@+id/friend_map_miles"
-            android:textSize="35sp"
+            android:textSize="20sp"
             android:padding="10dp"
             android:layout_gravity="center_horizontal" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:src="@drawable/map"
-            android:scaleX="2"
-            android:scaleY="1.5"
-            android:padding="45dp"
-            android:layout_gravity="center_horizontal" />
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:name="com.google.android.gms.maps.MapFragment"/>
 
         <LinearLayout
             android:orientation="horizontal"

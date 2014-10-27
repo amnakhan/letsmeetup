@@ -5,61 +5,71 @@
     tools:context="com.mbembac.letsmeetup.Application"
     android:background="#B7FFF0">
 
-<TextView
-        android:id="@+id/txtwelcome"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Welcome"
-        android:textAlignment="center"
-        android:paddingTop="40dp"
-        android:fontFamily="sans-serif-short"
-        android:textAllCaps="true"
-        android:textColor="#003366"
-        android:textStyle="bold"
         android:gravity="center"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentRight="true" />
+        android:layout_margin="10dp"
+        android:id="@+id/welcome_layout_banner">
 
-    <TextView
-        android:id="@+id/txtuser"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/txtuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome user"
+            android:layout_centerHorizontal="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtwelcome"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/welcome_layout_top"
+        android:layout_below="@+id/welcome_layout_banner">
 
-    <!--friends who are close-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center">
 
-    <TextView
-        android:id="@+id/welcometitle"
-        android:text="@string/welcomemsg"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:shadowColor="#FFFFFF"
-        android:shadowRadius="3"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:layout_width="wrap_content"
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find Friends"
+                android:id="@+id/find_friends_button" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:id="@+id/welcome_layout_center"
+        android:layout_below="@+id/welcome_layout_top">
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/friends_listView"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtuser"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:gravity="center_horizontal"/>
-
-    <Button
-        android:id="@+id/friendme_button"
-        android:text="@string/findfriend"
-        style="@style/button_text"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-
-    <Button
-        android:id="@+id/logout"
-        android:text="@string/LogoutBtn"
-        style="@style/button_text"
-        android:layout_below="@+id/friendme_button"
-        android:layout_centerHorizontal="true" />
+        android:gravity="center"
+        android:id="@+id/welcome_layout_bottom"
+        android:layout_below="@+id/welcome_layout_center">
+        <Button
+            android:id="@+id/logout"
+            android:layout_centerInParent="true"
+            android:text="@string/LogoutBtn"
+            style="@style/button_text"/>
+    </LinearLayout>
 
 </RelativeLayout>

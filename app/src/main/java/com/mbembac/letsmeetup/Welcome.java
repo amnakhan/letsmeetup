@@ -1,6 +1,9 @@
 package com.mbembac.letsmeetup;
 
-import com.parse.ParseUser;
+/**
+ * Created by amnakhan on 10/16/14.
+ */
+
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +14,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import com.parse.ParseUser;
+
+import com.parse.ParseUser;
 
 public class Welcome extends Activity {
 
@@ -19,10 +25,11 @@ public class Welcome extends Activity {
     Button friendme;
 
 
+    private Welcome context;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Get the view from singleitemview.xml
         setContentView(R.layout.welcome);
 
@@ -33,6 +40,21 @@ public class Welcome extends Activity {
         Typeface customFont = Typeface.createFromAsset(getAssets(),"font1.ttf");
         TextView b = (TextView) findViewById(R.id.welcometitle);
         b.setTypeface(customFont);
+
+        context = this;
+
+        Button map = (Button) findViewById(R.id.find_friends_button);
+        map.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent friendMap;
+                friendMap = new Intent(context, FriendMapActivty.class);
+                startActivity(friendMap);
+            }
+        });
+
+
+//        Debug.startMethodTracing();
 
         // Retrieve current user from Parse.com
         ParseUser currentUser = ParseUser.getCurrentUser();
@@ -70,4 +92,37 @@ public class Welcome extends Activity {
             }
         });
     }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        Debug.stopMethodTracing();
+    }
+
 }
