@@ -4,14 +4,31 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 
 
 public class FriendMapActivty extends Activity {
+
+    private MapFragment mMapFragment;
+    private GoogleMap gMap;
+    public final String TAG = this.getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friend_map_activty);
+
+//        mMapFragment = MapFragment.newInstance();
+//        FragmentTransaction fragmentTransaction =
+//                getFragmentManager().beginTransaction();
+//        fragmentTransaction.add(R.id.gmap, mMapFragment);
+//        fragmentTransaction.commit();
+
+        setUpMapIfNeeded();
+
     }
 
 
@@ -33,4 +50,27 @@ public class FriendMapActivty extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    private void setUpMapIfNeeded() {
+
+        if (gMap == null) {
+            gMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.gmap)).getMap();
+
+            if (gMap != null) {
+                setupMap();
+            }else{
+                Toast.makeText(this, "Google Maps not available",
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+
+    }
+
+    private void setupMap() {
+//        gMap.addMarker(new MarkerOptions(new LatLng(0.0,0.0)).title("marker"));
+        gMap.setMyLocationEnabled(true);
+
+    }
 }
+

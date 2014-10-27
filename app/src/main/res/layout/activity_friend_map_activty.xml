@@ -37,10 +37,18 @@
             android:layout_gravity="center_horizontal" />
 
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/map"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/gmap"
             android:layout_width="match_parent"
             android:layout_height="245dp"
-            android:name="com.google.android.gms.maps.MapFragment"/>
+            android:name="com.google.android.gms.maps.MapFragment"
+            map:cameraBearing="112.5"
+            map:cameraTargetLat="39.9997"
+            map:cameraTargetLng="-83.0126"
+            map:cameraTilt="30"
+            map:cameraZoom="13"
+            map:mapType="normal"
+            map:uiCompass="true"/>
 
         <LinearLayout
             android:orientation="horizontal"
