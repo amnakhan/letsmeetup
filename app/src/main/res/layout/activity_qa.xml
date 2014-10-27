@@ -1,0 +1,25 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/common_questions"
+        android:id="@+id/common_question_title"
+        android:padding="45dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/qa"
+        android:id="@+id/qa_text"
+        android:paddingLeft="30sp"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

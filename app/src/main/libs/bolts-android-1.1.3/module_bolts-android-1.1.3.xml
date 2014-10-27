@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_bolts-android-1.1.3" default="compile.module.bolts-android-1.1.3">
+  <dirname property="module.bolts-android-1.1.3.basedir" file="${ant.file.module_bolts-android-1.1.3}"/>
+  
+  <property name="module.jdk.home.bolts-android-1.1.3" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.bolts-android-1.1.3" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.bolts-android-1.1.3" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.bolts-android-1.1.3" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="bolts-android-1.1.3.output.dir" value="undefined"/>
+  <property name="bolts-android-1.1.3.testoutput.dir" value="undefined"/>
+  
+  <path id="bolts-android-1.1.3.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="bolts-android-1.1.3.module.production.classpath">
+    <path refid="${module.jdk.classpath.bolts-android-1.1.3}"/>
+  </path>
+  
+  <path id="bolts-android-1.1.3.runtime.production.module.classpath"/>
+  
+  <path id="bolts-android-1.1.3.module.classpath">
+    <path refid="${module.jdk.classpath.bolts-android-1.1.3}"/>
+  </path>
+  
+  <path id="bolts-android-1.1.3.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.bolts-android-1.1.3">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.bolts-android-1.1.3">
+    <patternset refid="excluded.from.module.bolts-android-1.1.3"/>
+  </patternset>
+  
+  
+  <target name="compile.module.bolts-android-1.1.3" depends="compile.module.bolts-android-1.1.3.production,compile.module.bolts-android-1.1.3.tests" description="Compile module bolts-android-1.1.3"/>
+  
+  <target name="compile.module.bolts-android-1.1.3.production" depends="register.custom.compilers" description="Compile module bolts-android-1.1.3; production classes"/>
+  
+  <target name="compile.module.bolts-android-1.1.3.tests" depends="register.custom.compilers,compile.module.bolts-android-1.1.3.production" description="compile module bolts-android-1.1.3; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.bolts-android-1.1.3" description="cleanup module">
+    <delete dir="${bolts-android-1.1.3.output.dir}"/>
+    <delete dir="${bolts-android-1.1.3.testoutput.dir}"/>
+  </target>
+</project>
