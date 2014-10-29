@@ -5,11 +5,13 @@ package com.mbembac.letsmeetup;
  */
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
@@ -32,7 +34,13 @@ public class LoginSignupActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get the view from main.xml
+
         setContentView(R.layout.loginsignup);
+
+        Typeface customFont = Typeface.createFromAsset(getAssets(),"Chi-TownNF.ttf");
+        TextView b = (TextView) findViewById(R.id.login_main_title);
+        b.setTypeface(customFont);
+
         // Locate EditTexts in main.xml
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
