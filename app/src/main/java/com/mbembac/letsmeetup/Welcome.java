@@ -5,7 +5,6 @@ package com.mbembac.letsmeetup;
  * Created by amnakhan on 10/16/14.
  */
 
-import com.parse.ParseUser;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -36,15 +35,15 @@ public class Welcome extends Activity {
         // Get the view from singleitemview.xml
         setContentView(R.layout.welcome);
 
-//        Button map = (Button) findViewById(R.id.find_friends_button);
-//        map.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent friendMap;
-//                friendMap = new Intent(context, FriendMapActivty.class);
-//                startActivity(friendMap);
-//            }
-//        });
+        Button map = (Button) findViewById(R.id.find_friends_button);
+        map.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent friendMap;
+                friendMap = new Intent(context, FriendMapActivty.class);
+                startActivity(friendMap);
+            }
+        });
 
 
         friendme = (Button) findViewById(R.id.friendme_button);

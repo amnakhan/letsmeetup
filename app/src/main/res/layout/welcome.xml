@@ -47,10 +47,21 @@
         android:layout_marginTop="33dp"
         android:gravity="center_horizontal"/>
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/find_friends_button"
+        android:text="Load Map"
+        style="@style/button_text"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
     <Button
         android:id="@+id/friendme_button"
         android:text="@string/findfriend"
         style="@style/button_text"
+        android:layout_below="@+id/find_friends_button"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
