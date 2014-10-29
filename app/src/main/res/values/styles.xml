@@ -11,7 +11,7 @@
         <item name="android:textColor" >#FFFFFF</item>
         <item name="android:gravity" >center</item>
         <item name="android:layout_margin" >3dp</item>
-        <item name="android:textSize" >15dp</item>
+        <item name="android:textSize" >15sp</item>
         <item name="android:textStyle" >bold</item>
         <item name="android:shadowColor" >#000000</item>
         <item name="android:shadowDx" >1</item>
@@ -31,6 +31,5 @@
         <item name="android:windowEnterAnimation">@anim/fadein</item>
         <item name="android:windowExitAnimation">@anim/fadeout</item>
     </style>
-
 
 </resources>
