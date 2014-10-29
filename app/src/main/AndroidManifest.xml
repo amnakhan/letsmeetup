@@ -31,6 +31,7 @@
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LostPasswordActivity" />
         <activity android:name=".FriendMapActivty" />
+        <activity android:name=".FriendActivity" />
         <activity android:name=".QAActivity" />
         <activity android:name=".ContactsActivity" />
         <activity android:name=".EditAccountActivity" />

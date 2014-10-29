@@ -6,14 +6,111 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.mbembac.letsmeetup.FindFriendsActivity">
+    android:background="#B7FFF0"
+    tools:context="com.mbembac.letsmeetup.LostPasswordActivity">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp">
+
+        <!--title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/friendsmsg"
+            android:textColor="#393939"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:id="@+id/textView"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
 
 
+        <!--text-box to search-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/search_username"
+            android:textColor="#003366"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/search_username"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#003366"
+            android:textColorHighlight="#FFFFFF"
+            android:fontFamily="sans-serif-condensed"
+            android:background="#E0FFFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10sp"
+            android:ems="10"
+            android:id="@+id/find_user_box" />
+
+        <ListView
+            android:id="@+id/friendresults"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:drawSelectorOnTop="false"
+            android:layout_gravity="center_horizontal">
+        </ListView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/findfriend_button"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/findfriend_button"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:clickable="true"
+            style="@style/main_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/addfriend_button"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/addfriend_button"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:clickable="true"
+            style="@style/main_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/go_back_button"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/go_back_friends"
+            android:textSize="12sp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:clickable="true"
+            style="@style/main_button"/>
+
+
+    </LinearLayout>
 
 </RelativeLayout>
