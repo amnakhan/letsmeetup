@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MenuInflater;
 
 
 public class ContactsActivity extends Activity {
@@ -20,8 +21,9 @@ public class ContactsActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.contacts, menu);
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

@@ -1,12 +1,12 @@
 package com.mbembac.letsmeetup;
 
-/**
- * Created by amnakhan on 10/17/14.
- */
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -30,14 +30,19 @@ public class LoginSignupActivity extends Activity {
     EditText password;
     EditText username;
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get the view from main.xml
 
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
         setContentView(R.layout.loginsignup);
 
-        Typeface customFont = Typeface.createFromAsset(getAssets(),"Chi-TownNF.ttf");
+        Typeface customFont = Typeface.createFromAsset(getAssets(), "Chi-TownNF.ttf");
         TextView b = (TextView) findViewById(R.id.login_main_title);
         b.setTypeface(customFont);
 
@@ -102,7 +107,7 @@ public class LoginSignupActivity extends Activity {
                                 } else {
                                     Toast.makeText(
                                             getApplicationContext(),
-                                            "No such user exists. Don't forget to Register!",
+                                            "Invalid login.",
                                             Toast.LENGTH_LONG).show();
                                 }
                             }
@@ -110,7 +115,6 @@ public class LoginSignupActivity extends Activity {
             }
         });
 
-
-
     }
+
 }

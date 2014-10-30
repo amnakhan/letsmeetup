@@ -1,30 +1,40 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat">
+        <item name="android:actionOverflowButtonStyle">@style/buttonOverflow</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
 
-    <style name="button_text" >
-        <item name="android:layout_width" >wrap_content</item>
-        <item name="android:layout_height" >40dp</item>
-        <item name="android:textColor" >#FFFFFF</item>
-        <item name="android:gravity" >center</item>
-        <item name="android:layout_margin" >3dp</item>
-        <item name="android:textSize" >15sp</item>
-        <item name="android:textStyle" >bold</item>
-        <item name="android:shadowColor" >#000000</item>
-        <item name="android:shadowDx" >1</item>
-        <item name="android:shadowDy" >1</item>
-        <item name="android:shadowRadius" >2</item>
+    <style name="buttonOverflow">
+        <item name="android:src">@drawable/icon_overflow</item>
     </style>
 
-    <style name="main_button" >
-        <item name="android:textStyle" >bold</item>
-        <item name="android:shadowColor" >#000000</item>
-        <item name="android:shadowDx" >1</item>
-        <item name="android:shadowDy" >1</item>
-        <item name="android:shadowRadius" >2</item>
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/effects</item>
+        <item name="android:height">30dp</item>
+    </style>
+
+    <style name="button_text">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="main_button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
     </style>
 
     <style name="Fade">

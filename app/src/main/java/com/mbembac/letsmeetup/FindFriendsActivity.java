@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MenuInflater;
 
 
 public class FindFriendsActivity extends Activity {
@@ -18,8 +19,9 @@ public class FindFriendsActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.find_friends, menu);
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

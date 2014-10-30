@@ -1,9 +1,13 @@
 package com.mbembac.letsmeetup;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.MenuInflater;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,6 +41,9 @@ public class CreateAccountActivity extends Activity {
      */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
 
         // Get the view from main.xml
         setContentView(R.layout.activity_create_account);

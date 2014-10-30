@@ -2,75 +2,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mbembac.letsmeetup.Application"
-    android:background="#B7FFF0">
-
-<TextView
-        android:id="@+id/txtwelcome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Welcome"
-        android:textAlignment="center"
-        android:paddingTop="40dp"
-        android:fontFamily="sans-serif-short"
-        android:textAllCaps="true"
-        android:textColor="#003366"
-        android:textStyle="bold"
-        android:gravity="center"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentRight="true" />
+    android:background="#B7FFF0"
+    tools:context="com.mbembac.letsmeetup.Application">
 
     <TextView
         android:id="@+id/txtuser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtwelcome"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="40dp" />
+
 
     <!--friends who are close-->
 
     <TextView
         android:id="@+id/welcometitle"
-        android:text="@string/welcomemsg"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:shadowColor="#FFFFFF"
-        android:shadowRadius="3"
-        android:shadowDx="2"
-        android:shadowDy="2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtuser"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:textColor="#393939"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="@string/welcomemsg"
+        android:textAlignment="center" />
 
+    <TableLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/welcometitle"
+        android:layout_margin="10dp">
+    </TableLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/find_friends_button"
-        android:text="Load Map"
+        android:id="@+id/map_button"
         style="@style/button_text"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@+id/friendme_button"
+        android:layout_centerHorizontal="true"
+        android:text="Load Map" />
 
     <Button
         android:id="@+id/friendme_button"
-        android:text="@string/findfriend"
         style="@style/button_text"
-        android:layout_below="@+id/find_friends_button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_below="@+id/tableLayout4"
+        android:layout_centerHorizontal="true"
+        android:text="@string/findfriend" />
 
     <Button
         android:id="@+id/logout"
-        android:text="@string/LogoutBtn"
         style="@style/button_text"
-        android:layout_below="@+id/friendme_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/map_button"
+        android:layout_centerHorizontal="true"
+        android:text="@string/LogoutBtn" />
 
 </RelativeLayout>

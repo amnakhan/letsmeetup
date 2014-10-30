@@ -7,7 +7,8 @@
     <application
         android:name="ParseApplication"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.mbembac.letsmeetup.MainActivity"
             android:label="@string/app_name">
@@ -18,37 +19,64 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".FindFriendsActivity"
-            android:parentActivityName=".Welcome">
+        <activity android:name=".LoginSignupActivity" />
+
+        <!--welcome is the parent-->
+        <activity android:name=".Welcome" />
+
+        <activity android:name=".FindFriendsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="Welcome" />
+                android:value=".Welcome" />
         </activity>
 
-        <activity android:name=".LoginSignupActivity" />
-        <activity android:name=".Welcome" />
+        <activity android:name=".FriendMapActivty">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Welcome" />
+        </activity>
+
+        <activity android:name=".FriendActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Welcome" />
+        </activity>
+
+        <activity android:name=".QAActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Welcome" />
+        </activity>
+
+        <activity android:name=".ContactsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Welcome" />
+        </activity>
+
+        <activity android:name=".EditAccountActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Welcome" />
+        </activity>
+
+        <!--outside of the login page-->
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LostPasswordActivity" />
-        <activity android:name=".FriendMapActivty" />
-        <activity android:name=".FriendActivity" />
-        <activity android:name=".QAActivity" />
-        <activity android:name=".ContactsActivity" />
-        <activity android:name=".EditAccountActivity" />
+
 
         <!--googlemaps-->
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDdDpGkDwdVATDZni-NrtfB9Ua6nJC3i0M"/>
+            android:value="AIzaSyDdDpGkDwdVATDZni-NrtfB9Ua6nJC3i0M" />
 
         <uses-feature
             android:glEsVersion="0x00020000"
-            android:required="true"/>
+            android:required="true" />
 
     </application>
 

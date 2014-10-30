@@ -1,20 +1,17 @@
 package com.mbembac.letsmeetup;
 
-
-/**
- * Created by amnakhan on 10/16/14.
- */
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.view.MenuInflater;
 import com.parse.ParseUser;
 
 public class Welcome extends Activity {
@@ -35,7 +32,7 @@ public class Welcome extends Activity {
         // Get the view from singleitemview.xml
         setContentView(R.layout.welcome);
 
-        Button map = (Button) findViewById(R.id.find_friends_button);
+        Button map = (Button) findViewById(R.id.map_button);
         map.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,9 +47,9 @@ public class Welcome extends Activity {
         logout = (Button) findViewById(R.id.logout);
 
 
-        Typeface customFont = Typeface.createFromAsset(getAssets(),"font1.ttf");
+        Typeface customFont = Typeface.createFromAsset(getAssets(),"BLACKJAR.ttf");
         TextView b = (TextView) findViewById(R.id.welcometitle);
-        b.setTypeface(customFont);
+
 
         // Retrieve current user from Parse.com
         ParseUser currentUser = ParseUser.getCurrentUser();
@@ -61,18 +58,24 @@ public class Welcome extends Activity {
         //String struser = currentUser.getUsername();
         String x = currentUser.get("first_name").toString();
 
+        String firstLetter = x.substring(0,1).toUpperCase();
+        String restLetters = x.substring(1).toLowerCase();
+        x = firstLetter + restLetters;
+
         // Locate TextView in welcome.xml
         TextView txtuser = (TextView) findViewById(R.id.txtuser);
-
+        txtuser.setTypeface(customFont);
 
         // Set the currentUser String into TextView
-        txtuser.setTextColor(Color.BLACK);
-        txtuser.setText("You are logged in as " + x);
+        txtuser.setTextColor(Color.DKGRAY);
+        txtuser.isOpaque();
+        txtuser.setText("Welcome " + x + "!");
 
 
         // Find Friends Button Click Listener
         friendme.setOnClickListener(new OnClickListener() {
             public void onClick(View arg0) {
+
                 Intent intent = new Intent(Welcome.this,
                         FriendActivity.class);
                 startActivity(intent);
@@ -121,6 +124,36 @@ public class Welcome extends Activity {
     protected void onDestroy() {
         super.onDestroy();
 //        Debug.stopMethodTracing();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        int titleId = getResources().getIdentifier("action_bar_title", "id",
+                "android");
+
+        TextView yourTextView = (TextView) findViewById(titleId);
+        Typeface customFont = Typeface.createFromAsset(getAssets(),"Chi-TownNF.ttf");
+        yourTextView.setTextColor(getResources().getColor(android.R.color.holo_blue_dark));
+        yourTextView.setTypeface(customFont);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // app icon in action bar clicked; goto parent activity.
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

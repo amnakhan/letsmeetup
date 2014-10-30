@@ -1,14 +1,20 @@
 package com.mbembac.letsmeetup;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -28,6 +34,9 @@ public class FriendActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_find_friends);
 
@@ -100,5 +109,37 @@ public class FriendActivity extends Activity {
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+        int titleId = getResources().getIdentifier("action_bar_title", "id",
+                "android");
+
+        TextView yourTextView = (TextView) findViewById(titleId);
+        Typeface customFont = Typeface.createFromAsset(getAssets(),"Chi-TownNF.ttf");
+        yourTextView.setTextColor(getResources().getColor(android.R.color.holo_blue_dark));
+        yourTextView.setTypeface(customFont);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // app icon in action bar clicked; goto parent activity.
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
 }
 
