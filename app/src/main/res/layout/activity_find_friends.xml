@@ -65,7 +65,7 @@
         </ListView>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/findfriend_button"
@@ -81,7 +81,7 @@
             style="@style/main_button"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/addfriend_button"
@@ -95,21 +95,20 @@
             android:clickable="true"
             style="@style/main_button"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/go_back_button"
-            android:fontFamily="sans-serif-short"
-            android:id="@+id/go_back_friends"
-            android:textSize="12sp"
-            android:layout_marginBottom="5dp"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal"
-            android:textAllCaps="true"
-            android:clickable="true"
-            style="@style/main_button"/>
-
+        <!--<Button-->
+            <!--android:layout_width="140dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:text="@string/go_back_button"-->
+            <!--android:fontFamily="sans-serif-short"-->
+            <!--android:id="@+id/go_back_friends"-->
+            <!--android:textSize="12sp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:clickable="true"-->
+            <!--style="@style/main_button"/>-->
 
     </LinearLayout>
 

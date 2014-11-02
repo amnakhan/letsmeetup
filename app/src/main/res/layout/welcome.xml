@@ -1,9 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B7FFF0"
     tools:context="com.mbembac.letsmeetup.Application">
+
 
     <TextView
         android:id="@+id/txtuser"
@@ -12,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:textSize="40dp" />
+        android:textSize="40sp" />
 
 
     <!--friends who are close-->
@@ -48,16 +50,16 @@
     <Button
         android:id="@+id/map_button"
         style="@style/button_text"
-        android:layout_below="@+id/friendme_button"
+        android:layout_below="@+id/tableLayout4"
         android:layout_centerHorizontal="true"
         android:text="Load Map" />
 
-    <Button
-        android:id="@+id/friendme_button"
-        style="@style/button_text"
-        android:layout_below="@+id/tableLayout4"
-        android:layout_centerHorizontal="true"
-        android:text="@string/findfriend" />
+    <!--<Button-->
+        <!--android:id="@+id/friendme_button"-->
+        <!--style="@style/button_text"-->
+        <!--android:layout_below="@+id/tableLayout4"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="@string/findfriend" />-->
 
     <Button
         android:id="@+id/logout"
@@ -65,5 +67,6 @@
         android:layout_below="@+id/map_button"
         android:layout_centerHorizontal="true"
         android:text="@string/LogoutBtn" />
+
 
 </RelativeLayout>

@@ -1,8 +1,6 @@
 package com.mbembac.letsmeetup;
 
-/**
- * Created by amnakhan on 10/17/14.
- */
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +8,13 @@ import android.os.Bundle;
 import com.parse.ParseAnonymousUtils;
 import com.parse.ParseUser;
 
-import android.graphics.Typeface;
-import android.widget.TextView;
-
 public class MainActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
 
         // Determine whether the current user is an anonymous user
         if (ParseAnonymousUtils.isLinked(ParseUser.getCurrentUser())) {
@@ -31,7 +29,7 @@ public class MainActivity extends Activity {
             ParseUser currentUser = ParseUser.getCurrentUser();
             if (currentUser != null) {
                 // Send logged in users to Welcome.class
-                Intent intent = new Intent(MainActivity.this, Welcome.class);
+                Intent intent = new Intent(MainActivity.this, FragmentMainPage.class);
                 startActivity(intent);
                 finish();
             } else {

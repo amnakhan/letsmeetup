@@ -5,8 +5,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -98,7 +96,7 @@ public class LoginSignupActivity extends Activity {
                                     // If user exist and authenticated, send user to Welcome.class
                                     Intent intent = new Intent(
                                             LoginSignupActivity.this,
-                                            Welcome.class);
+                                            FragmentMainPage.class);
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(),
                                             "You are now logged on!",
