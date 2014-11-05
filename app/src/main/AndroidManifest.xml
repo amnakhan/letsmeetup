@@ -13,7 +13,7 @@
 
         <!--android:uiOptions="splitActionBarWhenNarrow">-->
         <!--<meta-data android:name="android.support.UI_OPTIONS"-->
-            <!--android:value="splitActionBarWhenNarrow" />-->
+        <!--android:value="splitActionBarWhenNarrow" />-->
 
         <activity
             android:name="com.mbembac.letsmeetup.MainActivity"
@@ -26,47 +26,10 @@
         </activity>
 
         <activity android:name=".LoginSignupActivity" />
-
-        <!--welcome is the parent-->
-        <activity android:name=".Welcome" />
-
-        <activity android:name=".FindFriendsActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Welcome" />
-        </activity>
-
-        <activity android:name=".FriendMapActivty">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Welcome" />
-        </activity>
-
-        <activity android:name=".FriendActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Welcome" />
-        </activity>
-
-        <activity android:name=".QAActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Welcome" />
-        </activity>
-
-        <activity android:name=".FragmentMainPage" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Welcome" />
-        </activity>
-
-        <activity android:name=".EditAccountActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Welcome" />
-        </activity>
-
-        <!--outside of the login page-->
+        <activity android:name=".FindFriendsActivity" />
+        <activity android:name=".FriendMapActivty" />
+        <activity android:name=".FragmentMainPage" />
+        <activity android:name=".EditAccountActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LostPasswordActivity" />
 

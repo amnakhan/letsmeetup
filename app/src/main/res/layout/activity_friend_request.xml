@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#B7FFF0"
+    tools:context="com.mbembac.letsmeetup.LostPasswordActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp">
+
+        <!--title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Friend Requests."
+            android:textColor="#393939"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:id="@+id/textView"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+
+
+        <!--text-box to search-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Pending Requests:"
+            android:textColor="#003366"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/search_username"
+            android:layout_gravity="center_horizontal" />
+
+        <ListView
+            android:id="@+id/friendresults"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:drawSelectorOnTop="false"
+            android:layout_gravity="center_horizontal">
+        </ListView>
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Accept Request"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/accept_request_button"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:clickable="true"
+            style="@style/main_button"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Reject Request"
+            android:fontFamily="sans-serif-short"
+            android:id="@+id/reject_request_button"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="true"
+            android:clickable="true"
+            style="@style/main_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
